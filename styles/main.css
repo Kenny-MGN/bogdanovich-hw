@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "FuturaPT";
+    src:
+        url('/fonts/FuturaPT-Book.eot') format("eot"),
+        url('/fonts/FuturaPT-Book.woff') format("woff"),
+        url('/fonts/FuturaPT-Book.ttf') format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    font-family: FuturaPT, Arial, sans-serif;
+    font-size: medium;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+}
+header {
+    line-height: 81px;
+    font-size: 300%;
+    font-weight: bold;
+}
+header, section, footer {
+    text-align: center;
+}
+h1 {
+    font-size: 200%;
+}
+.bio_text {
+    width: 50%;
+    text-align: justify;
+    text-indent: 1em;
+    padding: 10px;
+    vertical-align: center;
+}
+.css_table {
+    display: table;
+}
+.table_row {
+    display: table-row;
+}
+.table_cell {
+    display: table-cell;
+}
+.float_left {
+    float: left;
+}
+.red_color {
+    color: rgb(227, 32, 48);
+}
+footer {
+    clear: left;
+}
