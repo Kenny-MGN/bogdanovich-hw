@@ -10,21 +10,30 @@
 body {
     font-family: FuturaPT, Arial, sans-serif;
     font-size: medium;
-    width: 55%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
 }
 header {
-    line-height: 81px;
     font-size: 300%;
     font-weight: bold;
 }
-header, section, footer {
-    text-align: center;
+nav > ul{
+    font-size: large;
+    list-style-type: none;
 }
-h1 {
-    font-size: 200%;
+nav ul li { display: inline; }
+nav ul li a:hover, .red_color {color: rgb(227, 32, 48);}
+nav ul li a {
+    text-decoration: none;
+    font-size: 110%;
 }
+header, section, footer { text-align: center; }
+header a img:hover{
+    transform: scale(1.2);
+    transition: all 1s;
+}
+h1 { font-size: 200%; }
 .bio_text {
     width: 50%;
     text-align: justify;
@@ -32,21 +41,8 @@ h1 {
     padding: 10px;
     vertical-align: center;
 }
-.css_table {
-    display: table;
-}
-.table_row {
-    display: table-row;
-}
-.table_cell {
-    display: table-cell;
-}
-.float_left {
-    float: left;
-}
-.red_color {
-    color: rgb(227, 32, 48);
-}
-footer {
-    clear: left;
-}
+.css_table { display: table; }
+.table_row { display: table-row; }
+.table_cell { display: table-cell; }
+.float_left { float: left; }
+footer { clear: left; }

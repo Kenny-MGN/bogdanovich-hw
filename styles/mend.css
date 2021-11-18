@@ -1,0 +1,79 @@
+table, th, td { border: thin solid black; }
+table {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Times New Roman", Georgia serif;
+    font-size: large;
+    text-align: center;
+    vertical-align: middle;
+    border-collapse: collapse;
+}
+caption {
+    font-size: 110%;
+    margin-bottom: 5px;
+}
+th, .period, .line {
+    font-size: x-large;
+    font-weight: bold;
+}
+a:link, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+td.chem_element:hover {
+    transform: scale(1.3);
+    transition: all 0.5s;
+}
+.element_cell {
+    display: grid;
+    grid-template-areas:    "symbol number"
+                            "symbol mass"
+                            "name name";
+    font-weight: bold;
+}
+.element_cell_reflect {
+    display: grid;
+    grid-template-areas:    "number symbol"
+                            "mass symbol"
+                            "name name";
+    font-weight: bold;
+}
+.element_symbol {
+    grid-area: symbol;
+    text-align: left;
+    font-size: 200%;
+}
+.element_number {
+    grid-area: number;
+    text-align: right;
+}
+.element_mass {
+    grid-area: mass;
+    text-align: right;
+    font-weight: normal;
+}
+.element_name {
+    grid-area: name;
+    text-align: left;
+}
+.element_symbol_reflect {
+    grid-area: symbol;
+    text-align: right;
+    font-size: 200%;
+}
+.element_number_reflect {
+    grid-area: number;
+    text-align: left;
+}
+.element_mass_reflect {
+    grid-area: mass;
+    text-align: left;
+    font-weight: normal;
+}
+.element_name_reflect {
+    grid-area: name;
+    text-align: right;
+}
+.bright_red     { background-color: rgb(228, 143, 154); }
+.yellow         { background-color: rgb(244, 227, 51); }
+.bright_blue    { background-color: rgb(150, 207, 225); }
