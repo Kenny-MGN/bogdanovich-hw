@@ -1,3 +1,9 @@
+<?
+    require_once('../scripts/get_weather_icon.php');
+    /**
+    * @var $time_icon_name - переменная подключаемого файла
+    */
+?>
 <!doctype html>
 <html lang="ru">
 	<head>
@@ -5,8 +11,8 @@
 		<title>Таблица Менделеева</title>
 		<link rel="stylesheet" href="../styles/main.css">
 		<link rel="stylesheet" href="../styles/mend.css">
-		<link rel="icon" type="image/png" href="../images/favicon-16x16.png" sizes="16x16">
-		<link rel="icon" type="image/png" href="../images/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="../images/icons/favicon-16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="../images/icons/favicon-32x32.png" sizes="32x32">
 	</head>
 	<body>
 	<header>
@@ -18,7 +24,7 @@
 					</a>
 				</li>
 				<li class="no_print">
-					<a href="../index.html" title="Вернуться на главную страницу">
+					<a href="../index.php" title="Вернуться на главную страницу">
 						Вернуться на главную страницу
 					</a>
 				</li>
@@ -26,6 +32,11 @@
 					<img src="../images/github.jpg" alt="GitHub" id="github_logo">
 					<a href="https://github.com/Kenny-MGN/bogdanovich-hw" title="GitHub" target="_blank">GitHub</a>
 				</li>
+                <li class="no_print">
+                    <a href="https://time.is/" title="Точное время" target="_blank">
+                        <img src="../images/icons/<?=$time_icon_name?>.png" alt="Точное время"">
+                    </a>
+                </li>
 			</ul>
 		</nav>
 	</header>
