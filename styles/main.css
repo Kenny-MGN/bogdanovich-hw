@@ -1,9 +1,9 @@
 @font-face {
     font-family: "FuturaPT";
     src:
-            url('/fonts/FuturaPT-Book.eot') format("eot"),
-            url('/fonts/FuturaPT-Book.woff') format("woff"),
-            url('/fonts/FuturaPT-Book.ttf') format("truetype");
+            url('../fonts/FuturaPT-Book.eot') format("eot"),
+            url('../fonts/FuturaPT-Book.woff') format("woff"),
+            url('../fonts/FuturaPT-Book.ttf') format("truetype");
     font-weight: 400;
     font-style: normal;
 }
@@ -52,9 +52,6 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-.text_with_image {
-    display: flex;
-}
 
 /* Шапка (header) страницы */
 
@@ -78,9 +75,6 @@ body header nav ul li a:hover {
 #fact_logo:hover {
     transform: scale(1.1);
     transition: all 1s;
-}
-#github_logo {
-    margin-right: 5px;
 }
 
 /* Основная часть страницы*/

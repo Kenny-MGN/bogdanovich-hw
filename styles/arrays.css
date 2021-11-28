@@ -1,0 +1,47 @@
+main {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 150%;
+}
+figure {
+    margin-bottom: 0;
+}
+h1 {
+    margin-bottom: 0;
+}
+ol {
+    margin-top: 0;
+}
+h2 {
+    font-size: 95%;
+    margin-top: 0;
+}
+#arrays_meme {
+    width: 60%;
+}
+.arrays_solution_code {
+    display: block;
+    text-align: left;
+    font-size: 85%;
+    padding: 0 0 2% 8%;
+    white-space: pre-wrap;
+}
+.array_num {
+    border: thin solid black;
+    padding: 2px;
+}
+@media screen and (max-width: 600px) {
+    main {
+        width: 100%;
+    }
+    ol {
+        margin-top: 0;
+    }
+    figure {
+        display: none;
+    }
+}
