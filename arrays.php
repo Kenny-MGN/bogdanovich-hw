@@ -1,10 +1,10 @@
 <?
     $page_title = 'Массивы';
-    require_once ('../template/header.php');
+    require_once ('header.php');
 ?>
 <main>
     <figure>
-        <img src="../images/arrays_meme.jpg" alt="Мем про многомерные массивы" id="arrays_meme">
+        <img src="images/arrays_meme.jpg" alt="Мем про многомерные массивы" id="arrays_meme">
     </figure>
     <h1>Задачи:</h1>
     <ol>
@@ -41,7 +41,6 @@ foreach ($array1 as $num) echo ($num % 2 == 0) ? "&lt;b&gt;$num&lt;/b&gt;&lt;br&
                 <summary>Решение</summary>
                 <code class="arrays_solution_code">
 $array2 = [<br>
-    array('Athens', 'Moscow', 'Kiev', 'Washington', 'Abu-Dhabi', 'Belgrade', 'Ottawa'),<br>
     array('Athens', 'Moscow', 'Kiev', 'Washington', 'Abu-Dhabi', 'Belgrade', 'Ottawa'),<br>
     array('Rose', 'Lily', 'Aster', 'Violet', 'Sunflower', 'Azalea', 'Camellia', 'Anemone'),<br>
     array('Alaina', 'Valerie', 'Marie', 'Alyssa', 'Kathleen', 'Jane', 'Anna')<br>
@@ -154,4 +153,4 @@ echo "Общее количество элементов в массиве (вк
         </li>
     </ol>
 </main>
-<? require_once ('../template/footer.php'); ?>
+<? require_once ('footer.php'); ?>

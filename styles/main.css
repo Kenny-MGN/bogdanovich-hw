@@ -272,6 +272,10 @@ footer {
         display: flex;
         flex-direction: column;
     }
+    section#page_service_info {
+        display: flex;
+        flex-direction: column;
+    }
     #social_block {
         justify-content: space-evenly;
         margin-right: 0;

@@ -1,6 +1,6 @@
 <?
     $page_title = 'Периодическая таблица';
-    require_once ('../template/header.php');
+    require_once ('header.php');
 ?>
 <main>
     <table>
@@ -167,4 +167,4 @@
         </tr>
     </table>
 </main>
-<? require_once ('../template/footer.php'); ?>
+<? require_once ('footer.php'); ?>
