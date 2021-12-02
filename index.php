@@ -44,14 +44,8 @@
             ?>
         </h2>
         <p id="about_me">
-            <?
-                // Не изящно, но работает :)
-                $about_me_words = preg_split('/\s+/', $page_text_content['about_me']);
-                $first_phrase = array_shift($about_me_words) . ' ' . array_shift($about_me_words);
-                $colored_first_phrase = '<span style="color: ' . get_random_color() . '">' . "$first_phrase</span>";
-                array_unshift($about_me_words, $colored_first_phrase);
-                echo implode(' ', $about_me_words);
-            ?>
+            <!-- В пользовательскую функцию передаем строку, цвет и необходимое количество слов -->
+            <?=phrase_to_color($page_text_content['about_me'], get_random_color(), 2)?>
         </p>
         <p id="feedback">
             <?=string_to_double_color($page_text_content['feedback'])?>
@@ -137,14 +131,9 @@
     </section>
     <section id="page_service_info">
         <h3>Служебная информация:</h3>
-        <?
-            $index_page_vowels = 0;
-            foreach ($page_text_content as $str) $index_page_vowels += str_vowels_count_ru($str);
-            echo "<p>Количество гласных букв на странице: $index_page_vowels</p>";
-
-            $index_page_words = 0;
-            foreach ($page_text_content as $str) $index_page_words += str_word_count_ru($str);
-            echo "<p>Количество слов на странице: $index_page_words</p>";
+        <? // Вывод при помощи обновленных функций (добавлена возможность передачи массива в параметр)
+            echo '<p>Количество гласных букв на странице: ', str_vowels_count_ru($page_text_content), '</p>';
+            echo '<p>Количество слов на странице: ', str_word_count_ru($page_text_content), '</p>';
         ?>
     </section>
 </main>
