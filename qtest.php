@@ -15,7 +15,7 @@
     <form method="post" action="<?=$_SERVER['PHP_SELF']?>">
         <ol>
             <li class="question">
-                <span class="question_text">Считаете ли Вы, что у многих ваших знакомых хороший характер?</span>
+                <span class="question_text"><?=$n?>. Считаете ли Вы, что у многих ваших знакомых хороший характер?</span>
                 <span class="question_switch">
                     <input type="radio" name="user_answers[<?=$n?>]" value="1" id="q<?=$n?>_true" class="answer_true" checked>
                     <label for="q<?=$n?>_true">
@@ -29,7 +29,7 @@
             </li>
 
             <li class="question">
-                <span class="question_text">Раздражают ли Вас мелкие повседневные обязанности?</span>
+                <span class="question_text"><?=$n?>. Раздражают ли Вас мелкие повседневные обязанности?</span>
                 <span class="question_switch">
                     <input type="radio" name="user_answers[<?=$n?>]" value="1" id="q<?=$n?>_true" class="answer_true" checked>
                     <label for="q<?=$n?>_true">
@@ -43,7 +43,7 @@
             </li>
 
             <li class="question">
-                <span class="question_text">Верите ли Вы, что ваши друзья преданы Вам? </span>
+                <span class="question_text"><?=$n?>. Верите ли Вы, что ваши друзья преданы Вам? </span>
                 <span class="question_switch">
                     <input type="radio" name="user_answers[<?=$n?>]" value="1" id="q<?=$n?>_true" class="answer_true" checked>
                     <label for="q<?=$n?>_true">
@@ -57,7 +57,7 @@
             </li>
 
             <li class="question">
-                <span class="question_text">Неприятно ли Вам, когда незнакомый человек делает Вам замечание?</span>
+                <span class="question_text"><?=$n?>. Неприятно ли Вам, когда незнакомый человек делает Вам замечание?</span>
                 <span class="question_switch">
                     <input type="radio" name="user_answers[<?=$n?>]" value="1" id="q<?=$n?>_true" class="answer_true" checked>
                     <label for="q<?=$n?>_true">
@@ -71,7 +71,7 @@
             </li>
 
             <li class="question">
-                <span class="question_text">Способны ли Вы ударить собаку или кошку?</span>
+                <span class="question_text"><?=$n?>. Способны ли Вы ударить собаку или кошку?</span>
                 <span class="question_switch">
                     <input type="radio" name="user_answers[<?=$n?>]" value="1" id="q<?=$n?>_true" class="answer_true" checked>
                     <label for="q<?=$n?>_true">
@@ -85,7 +85,7 @@
             </li>
 
             <li class="question">
-                <span class="question_text">Часто ли Вы принимаете лекарства?</span>
+                <span class="question_text"><?=$n?>. Часто ли Вы принимаете лекарства?</span>
                 <span class="question_switch">
                     <input type="radio" name="user_answers[<?=$n?>]" value="1" id="q<?=$n?>_true" class="answer_true" checked>
                     <label for="q<?=$n?>_true">
@@ -99,7 +99,7 @@
             </li>
 
             <li class="question">
-                <span class="question_text">Часто ли Вы меняете магазин, в который ходите за продуктами?</span>
+                <span class="question_text"><?=$n?>. Часто ли Вы меняете магазин, в который ходите за продуктами?</span>
                 <span class="question_switch">
                     <input type="radio" name="user_answers[<?=$n?>]" value="1" id="q<?=$n?>_true" class="answer_true" checked>
                     <label for="q<?=$n?>_true">
@@ -113,7 +113,7 @@
             </li>
 
             <li class="question">
-                <span class="question_text">Продолжаете ли Вы отстаивать свою точку зрения, поняв, что ошиблись?</span>
+                <span class="question_text"><?=$n?>. Продолжаете ли Вы отстаивать свою точку зрения, поняв, что ошиблись?</span>
                 <span class="question_switch">
                     <input type="radio" name="user_answers[<?=$n?>]" value="1" id="q<?=$n?>_true" class="answer_true" checked>
                     <label for="q<?=$n?>_true">
@@ -127,7 +127,7 @@
             </li>
 
             <li class="question">
-                <span class="question_text">Тяготят ли Вас общественные обязанности? </span>
+                <span class="question_text"><?=$n?>. Тяготят ли Вас общественные обязанности? </span>
                 <span class="question_switch">
                     <input type="radio" name="user_answers[<?=$n?>]" value="1" id="q<?=$n?>_true" class="answer_true" checked>
                     <label for="q<?=$n?>_true">
@@ -141,7 +141,7 @@
             </li>
 
             <li class="question">
-                <span class="question_text">Способны ли Вы ждать более 5 минут, не проявляя беспокойства?</span>
+                <span class="question_text"><?=$n?>. Способны ли Вы ждать более 5 минут, не проявляя беспокойства?</span>
                 <span class="question_switch">
                     <input type="radio" name="user_answers[<?=$n?>]" value="1" id="q<?=$n?>_true" class="answer_true" checked>
                     <label for="q<?=$n?>_true">
@@ -155,7 +155,7 @@
             </li class="question">
 
             <li class="question">
-                <span class="question_text">Часто ли Вам приходят в голову мысли о Вашей невезучести?</span>
+                <span class="question_text"><?=$n?>. Часто ли Вам приходят в голову мысли о Вашей невезучести?</span>
                 <span class="question_switch">
                     <input type="radio" name="user_answers[<?=$n?>]" value="1" id="q<?=$n?>_true" class="answer_true" checked>
                     <label for="q<?=$n?>_true">
@@ -169,7 +169,7 @@
             </li>
 
             <li class="question">
-                <span class="question_text">Сохранилась ли у Вас фигура по сравнению с прошлым?</span>
+                <span class="question_text"><?=$n?>. Сохранилась ли у Вас фигура по сравнению с прошлым?</span>
                 <span class="question_switch">
                     <input type="radio" name="user_answers[<?=$n?>]" value="1" id="q<?=$n?>_true" class="answer_true" checked>
                     <label for="q<?=$n?>_true">
@@ -183,7 +183,7 @@
             </li>
 
             <li class="question">
-                <span class="question_text">Можете ли Вы с улыбкой воспринимать подтрунивание друзей?</span>
+                <span class="question_text"><?=$n?>. Можете ли Вы с улыбкой воспринимать подтрунивание друзей?</span>
                 <span class="question_switch">
                     <input type="radio" name="user_answers[<?=$n?>]" value="1" id="q<?=$n?>_true" class="answer_true" checked>
                     <label for="q<?=$n?>_true">
@@ -197,7 +197,7 @@
             </li>
 
             <li class="question">
-                <span class="question_text">Нравится ли Вам семейная жизнь?</span>
+                <span class="question_text"><?=$n?>. Нравится ли Вам семейная жизнь?</span>
                 <span class="question_switch">
                     <input type="radio" name="user_answers[<?=$n?>]" value="1" id="q<?=$n?>_true" class="answer_true" checked>
                     <label for="q<?=$n?>_true">
@@ -211,7 +211,7 @@
             </li>
 
             <li class="question">
-                <span class="question_text">Злопамятны ли Вы?</span>
+                <span class="question_text"><?=$n?>. Злопамятны ли Вы?</span>
                 <span class="question_switch">
                     <input type="radio" name="user_answers[<?=$n?>]" value="1" id="q<?=$n?>_true" class="answer_true" checked>
                     <label for="q<?=$n?>_true">
@@ -225,7 +225,7 @@
             </li>
 
             <li class="question">
-                <span class="question_text">Находите ли Вы, что стоит погода, типичная для данного времени года?</span>
+                <span class="question_text"><?=$n?>. Находите ли Вы, что стоит погода, типичная для данного времени года?</span>
                 <span class="question_switch">
                     <input type="radio" name="user_answers[<?=$n?>]" value="1" id="q<?=$n?>_true" class="answer_true" checked>
                     <label for="q<?=$n?>_true">
@@ -239,7 +239,7 @@
             </li>
 
             <li class="question">
-                <span class="question_text">Случается ли Вам с утра быть в плохом настроении? </span>
+                <span class="question_text"><?=$n?>. Случается ли Вам с утра быть в плохом настроении? </span>
                 <span class="question_switch">
                     <input type="radio" name="user_answers[<?=$n?>]" value="1" id="q<?=$n?>_true" class="answer_true" checked>
                     <label for="q<?=$n?>_true">
@@ -253,7 +253,7 @@
             </li>
 
             <li class="question">
-                <span class="question_text">Раздражает ли Вас современная живопись?</span>
+                <span class="question_text"><?=$n?>. Раздражает ли Вас современная живопись?</span>
                 <span class="question_switch">
                     <input type="radio" name="user_answers[<?=$n?>]" value="1" id="q<?=$n?>_true" class="answer_true" checked>
                     <label for="q<?=$n?>_true">
@@ -267,7 +267,7 @@
             </li class="question">
 
             <li class="question">
-                <span class="question_text">Надоедает ли Вам присутствие чужих детей в доме более одного часа?</span>
+                <span class="question_text"><?=$n?>. Надоедает ли Вам присутствие чужих детей в доме более одного часа?</span>
                 <span class="question_switch">
                     <input type="radio" name="user_answers[<?=$n?>]" value="1" id="q<?=$n?>_true" class="answer_true" checked>
                     <label for="q<?=$n?>_true">
