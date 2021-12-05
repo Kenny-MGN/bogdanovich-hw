@@ -7,7 +7,9 @@
     $existing_pages = [
         'index' => 'index.php" title="Вернуться на главную страницу">Вернуться на главную страницу',
         'arrays' => 'arrays.php" title="Массивы">Массивы',
-        'mend' => 'mend.php" title="Периодическая система химических элементов Д. И. Менделеева">Периодическая таблица'
+        'mend' => 'mend.php" title="Периодическая система химических элементов Д. И. Менделеева">Периодическая таблица',
+        'qtest' => 'qtest.php" title="Тестик">Тест',
+        'auth' => 'auth.php" title="Авторизация">Авторизация'
     ];
 ?>
 <!DOCTYPE html>
@@ -28,7 +30,7 @@
         <ul>
             <li>
                 <a href="https://fact.digital/" title="Факт" target="_blank" class="">
-                    <img src="images/fact_logo.jpg" alt="Логотип компании &quot;Факт&quot;" width="278" height="81" id="fact_logo">
+                    <img src="images/fact_logo.jpg" alt="Логотип компании &quot;Факт&quot;" width="222" height="65" id="fact_logo">
                 </a>
             </li>
             <? // Динамическая генерация элементов меню для страниц сайта (исключение ссылки на текущую страницу)

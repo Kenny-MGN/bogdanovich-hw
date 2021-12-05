@@ -1,0 +1,6 @@
+@import "auth.css";
+#submit_button {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}

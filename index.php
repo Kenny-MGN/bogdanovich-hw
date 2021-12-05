@@ -1,4 +1,5 @@
 <?
+    session_start();
     $page_title = 'Богданович Вадим';
     // feedback в одну строку, иначе символы табуляции тоже включаются в обработку функцией string_to_double_color()
     $page_text_content = [
@@ -30,6 +31,11 @@
     require_once ('funs.php');
 ?>
 <main>
+    <?
+        if ($_SESSION['user_name'] == 'admin') {
+            echo '<h2 style="text-align: center">Добро пожаловать, хозяин!</h2>';
+        }
+    ?>
     <section id="profile">
         <figure id="profile_photo">
             <img src="images/my_photo.jpg" alt="Фотография курсанта )" width="278" height="364" id="my_photo">
@@ -137,4 +143,6 @@
         ?>
     </section>
 </main>
-<? require_once ('footer.php'); ?>
+<?
+    require_once ('footer.php');
+?>

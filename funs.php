@@ -44,14 +44,14 @@
 
     function str_word_count_ru($data) {
         // Модификация (слой) над стандартной функцией для поддержки кириллицы и массивов
-        $chars = "АаБбВвГгҐґДдЕеЁёЄєЖжЗзИиІіЇїЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЬьЪъЫыЮюЬьЭэЯя";
+        $ru_chars = "АаБбВвГгҐґДдЕеЁёЄєЖжЗзИиІіЇїЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЬьЪъЫыЮюЬьЭэЯя";
         // Поддержка обработки массивов
         if (is_array($data)) {
             $count = 0;
-            foreach ($data as $str) $count += str_word_count($str, 0, $chars);
+            foreach ($data as $str) $count += str_word_count($str, 0, $ru_chars);
             return $count;
         }
-        return str_word_count($data, 0, $chars);
+        return str_word_count($data, 0, $ru_chars);
     }
 
     function str_vowels_count_ru($data) {
@@ -103,4 +103,18 @@
         $colored_phrase = '<span style="color: ' . $color . '">' . "$phrase</span>";
         array_unshift($arr, $colored_phrase);
         return implode(' ', $arr);
+    }
+
+    function get_test_result($user_answers): string {
+        $right_answers = [
+            1 => false, 2 => false, 3 => true, 4 => false, 5 => false,
+            6 => false, 7 => false, 8 => false, 9 => true, 10 => true,
+            11 => false, 12 => false, 13 => true, 14 => true, 15 => false,
+            16 => false, 17 => false, 18 => false, 19 => true];
+        for ($i = 1, $points = 0; $i <= count($user_answers); $i++) {
+            if ($user_answers[$i] == $right_answers[$i]) $points++;
+        }
+        if ($points < 8) return '<p style="color: red">Вашим друзьям можно посочувствовать.</p>';
+        elseif ($points <= 15) return '<p style="color: darkorange">Вы не лишены недостатков, но с вами можно ладить.</p>';
+        else return '<p style="color: green">У Вас покладистый характер</p>';
     }

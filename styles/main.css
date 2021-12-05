@@ -48,7 +48,7 @@
 body {
     font-family: FuturaPT, Arial, sans-serif;
     font-size: medium;
-    width: 82%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -65,7 +65,7 @@ body header nav ul {
     font-size: large;
 }
 body header nav ul li a {
-    font-size: 120%;
+    font-size: 115%;
     text-decoration: none;
 }
 body header nav ul li a:hover {

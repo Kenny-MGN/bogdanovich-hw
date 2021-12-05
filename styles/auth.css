@@ -1,0 +1,66 @@
+html, body {
+    height: 100%;
+    margin-top: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+main {
+    text-align: center;
+    flex: 1 0 auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+section#auth_form {
+    color: white;
+    background-color: #e32030;
+    padding: 1em;
+    font-size: 120%;
+}
+#submit_button {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 22px;
+    text-decoration: none;
+    padding: 7px 13px;
+    color: #e32030;
+    background: white;
+    border: 1px solid white;
+}
+#submit_button:hover {
+    background: #444;
+    color: white;
+    border: 1px solid white;
+    transition: all 0.2s ease;
+}
+
+.form_row {
+    display: flex;
+    justify-content: flex-end;
+    padding: .6em;
+}
+.form_row > label {
+    padding: .5em 1em .5em 0;
+    flex: 3;
+}
+.form_row > input {
+    flex: 2;
+}
+.form_row > input, .form_row > button {
+    padding: 1em;
+}
+.form_row > button {
+    background: gray;
+    color: white;
+    border: 0;
+}
+.form_row a {
+    color: white;
+    text-decoration: none;
+}
+.form_row a:hover {
+    text-decoration: underline;
+}
