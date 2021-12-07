@@ -34,21 +34,27 @@
     <?
         if ($_SESSION['user_name'] == 'admin') {
             echo '<h2 style="text-align: center">Добро пожаловать, хозяин!</h2>';
+            get_external_url_block();
         }
     ?>
     <section id="profile">
         <figure id="profile_photo">
-            <img src="images/my_photo.jpg" alt="Фотография курсанта )" width="278" height="364" id="my_photo">
+            <img src="images/my_photo.png" alt="Фотография курсанта )" width="278" height="364" id="my_photo">
         </figure>
         <h1 id="my_name">
             <?=$page_text_content['my_name']?>
         </h1>
-        <h2 id="birth_info">
+        <section id="birth_info">
             <?
-                echo $page_text_content['birth_date_text'], $page_text_content['birth_date_ddmmYY'], '<br>';
-                echo $page_text_content['expire_days_text'], days_diff_with_now($page_text_content['birth_date_ddmmYY']);
+                echo
+                '<h2>',
+                    $page_text_content['birth_date_text'], $page_text_content['birth_date_ddmmYY'],
+                '</h2>',
+                '<h3>',
+                    $page_text_content['expire_days_text'], days_diff_with_now($page_text_content['birth_date_ddmmYY']),
+                '</h3>';
             ?>
-        </h2>
+        </section>
         <p id="about_me">
             <!-- В пользовательскую функцию передаем строку, цвет и необходимое количество слов -->
             <?=phrase_to_color($page_text_content['about_me'], get_random_color(), 2)?>

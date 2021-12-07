@@ -33,6 +33,10 @@
         foreach ($pages as $page_name => $link) {
             if ($page_name != $current_page_name) echo '<li class="no_print"><a href="', $link, '</a></li>';
         }
+        if ($_SESSION['user_name'] == 'admin')
+            echo '<li class="no_print"><a href="' . $_SERVER['PHP_SELF'] .  '?action=logout" title="Выйти">Выйти</a></li>';
+        else
+            echo '<li class="no_print"><a href="auth.php" title="Авторизация">Авторизация</a></li>';
     }
 
     function generate_subpage_css_link(): string {
@@ -105,16 +109,24 @@
         return implode(' ', $arr);
     }
 
-    function get_test_result($user_answers): string {
-        $right_answers = [
-            1 => false, 2 => false, 3 => true, 4 => false, 5 => false,
-            6 => false, 7 => false, 8 => false, 9 => true, 10 => true,
-            11 => false, 12 => false, 13 => true, 14 => true, 15 => false,
-            16 => false, 17 => false, 18 => false, 19 => true];
-        for ($i = 1, $points = 0; $i <= count($user_answers); $i++) {
-            if ($user_answers[$i] == $right_answers[$i]) $points++;
+    function get_external_url_block() {
+        if (isset($_COOKIE['last_visit_page'])) {
+            switch ($_COOKIE['last_visit_page']) {
+                case 'fact':
+                    $company_str = 'компании &quot;Факт&quot;';
+                    break;
+                case '1c':
+                    $company_str = 'продукта 1C-Битрикс';
+            }
+            echo '<p style="text-align: center; font-size: 130%">В прошлый раз вы перешли на страницу ', $company_str,
+            '. Какую страницу хотите посетить на этот раз?</p>';
         }
-        if ($points < 8) return '<p style="color: red">Вашим друзьям можно посочувствовать.</p>';
-        elseif ($points <= 15) return '<p style="color: darkorange">Вы не лишены недостатков, но с вами можно ладить.</p>';
-        else return '<p style="color: green">У Вас покладистый характер</p>';
+        echo '<div style="display: flex; justify-content: center">';
+        echo '<figure>';
+        echo '<a href="cgi/redirection.php?site=fact" title="ФАКТ"><img src="images/fact_logo.svg" alt="Факт" height="56"></a>';
+        echo '</figure>';
+        echo '<figure>';
+        echo '<a href="cgi/redirection.php?site=1c" title="Битрикс"><img src="images/bitrix_logo.png" alt="Битрикс"></a>';
+        echo '</figure>';
+        echo '</div>';
     }

@@ -1,5 +1,6 @@
 <?
     session_start();
+    $page_title = 'Авторизация';
     require_once ('funs.php');
     require_once ('header.php');
     $login = 'admin';
@@ -34,6 +35,7 @@
             <div class="form_row">
                 <button type="submit" name="submit" id="submit_button" title="Вход">Войти</button>
             </div>
+
             <div class="form_row">
                 <a href="reg.php" title="Регистрация">Зарегистрироваться</a>
             </div>

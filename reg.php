@@ -1,5 +1,6 @@
 <?
     session_start();
+    $page_title = 'Регистрация';
     require_once ('funs.php');
     require_once ('header.php');
 ?>

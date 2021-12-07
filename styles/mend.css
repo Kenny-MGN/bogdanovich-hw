@@ -1,6 +1,6 @@
 table, th, td { border: thin solid black; }
 table {
-    margin: 5% auto;
+    margin: 1% auto 5%;
     font-family: "Times New Roman", Georgia, serif;
     font-size: large;
     text-align: center;
