@@ -33,7 +33,7 @@
         foreach ($pages as $page_name => $link) {
             if ($page_name != $current_page_name) echo '<li class="no_print"><a href="', $link, '</a></li>';
         }
-        if ($_SESSION['user_name'] == 'admin')
+        if (isset($_SESSION['user_name']) && !empty($_SESSION['user_name']))
             echo '<li class="no_print"><a href="' . $_SERVER['PHP_SELF'] .  '?action=logout" title="Выйти">Выйти</a></li>';
         else
             echo '<li class="no_print"><a href="auth.php" title="Авторизация">Авторизация</a></li>';
@@ -110,8 +110,8 @@
     }
 
     function get_external_url_block() {
-        if (isset($_COOKIE['last_visit_page'])) {
-            switch ($_COOKIE['last_visit_page']) {
+        if (isset($_COOKIE['last_visit_page_' . $_SESSION['user_name']])) {
+            switch ($_COOKIE['last_visit_page_' . $_SESSION['user_name']]) {
                 case 'fact':
                     $company_str = 'компании &quot;Факт&quot;';
                     break;
@@ -129,4 +129,10 @@
         echo '<a href="cgi/redirection.php?site=1c" title="Битрикс"><img src="images/bitrix_logo.png" alt="Битрикс"></a>';
         echo '</figure>';
         echo '</div>';
+    }
+    function clean_form_input($value): string {
+        $value = trim($value);              // убирает пробелы в начале и конце строки
+        $value = stripslashes($value);      // удаление экранированных символов
+        $value = strip_tags($value);        // очищает от HTML и PHP тегов
+        return htmlspecialchars($value);    // кодирует спец.символы
     }

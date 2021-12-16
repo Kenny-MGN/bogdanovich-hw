@@ -32,8 +32,9 @@
 ?>
 <main>
     <?
-        if ($_SESSION['user_name'] == 'admin') {
-            echo '<h2 style="text-align: center">Добро пожаловать, хозяин!</h2>';
+        if (isset($_SESSION['user_name']) && !empty($_SESSION['user_name'])) {
+            $current_user_str = ($_SESSION['user_name'] == 'admin') ? 'хозяин' : $_SESSION['user_name'];
+            echo '<h2 style="text-align: center">Добро пожаловать, ', $current_user_str, '</h2>';
             get_external_url_block();
         }
     ?>

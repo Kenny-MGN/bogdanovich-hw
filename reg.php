@@ -3,16 +3,38 @@
     $page_title = 'Регистрация';
     require_once ('funs.php');
     require_once ('header.php');
+    require_once ('cgi/db_auth.php');
 ?>
 <main>
 <?
-    if(isset($_POST['reg_button']) && !empty($_POST['user_name']) && $_POST['user_password1'] == $_POST['user_password2']):
-        echo '<h2 style="text-align: center">', $_POST['user_name'], ', вы успешно зарегистрировались!';
-    else:
+    if (isset($_POST['reg_button'])) {
+        $query = "SELECT login FROM users";
+        $res = $db->query($query);
+        $logins_arr = $res->fetchAll(PDO::FETCH_COLUMN, 0);
+        $valid_login = clean_form_input($_POST['user_name']);
+    }
+    if(
+        isset($_POST['reg_button'])
+        && !empty($_POST['user_name'])
+        && $_POST['user_password1'] == $_POST['user_password2']
+        && !in_array($valid_login, $logins_arr)
+    )
+    {
+        $valid_pw = trim($_POST['user_password1']);
+        $db->query("INSERT INTO users VALUES (NULL, '$valid_login', SHA1('$valid_pw'))");
+        echo '<h2 style="text-align: center">', $valid_login, ', вы успешно зарегистрировались!';
+        $_SESSION['user_name'] = $valid_login;
+        $_SESSION['auth_result'] = true;
+        header('refresh: 4; url=index.php');
+    }
+    else {
 ?>
     <section id="auth_form">
         <? if(isset($_POST['reg_button']) && empty($_POST['user_name'])) echo '<span>Вы не ввели имя пользователя!</span><br>'; ?>
-        <? if($_POST['user_password1'] != $_POST['user_password2']) echo '<span>Пароли не совпадают!</span>'; ?>
+        <? if($_POST['user_password1'] != $_POST['user_password2']) echo '<span>Пароли не совпадают!</span><br>'; ?>
+        <? if (isset($_POST['reg_button']) && in_array(clean_form_input($_POST['user_name']), $logins_arr))
+            echo '<span>Такой пользователь уже существует!</span>';
+        ?>
         <form method="post" action="<?=$_SERVER['PHP_SELF']?>">
             <div class="form_row">
                 <label for="login">Имя пользователя:</label>
@@ -36,6 +58,6 @@
             </div>
         </form>
     </section>
-    <? endif; ?>
+    <? } ?>
 </main>
 <? require_once ('footer.php'); ?>
