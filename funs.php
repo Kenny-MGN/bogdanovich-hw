@@ -136,3 +136,14 @@
         $value = strip_tags($value);        // очищает от HTML и PHP тегов
         return htmlspecialchars($value);    // кодирует спец.символы
     }
+    function getRegForm
+    (
+        $button_pressed = false,
+        $empty_user_name = false,
+        $passwords_match = true,
+        $user_already_exists = false,
+        $reg_success = true
+    )
+    {
+        require_once ('regform.php');
+    }

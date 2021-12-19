@@ -17,7 +17,7 @@
                 <summary>Решение</summary>
                 <code class="arrays_solution_code">
 $array1 = [];<br>
-for ($i = 0, $n = 10; $i < $n; $i++) $array1[] = mt_rand(0, 99);<br>
+for ($i = 0, $n = 10; $i &lt; $n; $i++) $array1[] = mt_rand(0, 99);<br>
 // Ноль тоже считается четным числом, поэтому не исключается из условия<br>
 foreach ($array1 as $num) echo ($num % 2 == 0) ? "&lt;b&gt;$num&lt;/b&gt;&lt;br&gt;" : "$num&lt;/br&gt;";
                 </code>
@@ -27,7 +27,11 @@ foreach ($array1 as $num) echo ($num % 2 == 0) ? "&lt;b&gt;$num&lt;/b&gt;&lt;br&
                         $array1 = [];
                         for ($i = 0, $n = 10; $i < $n; $i++) $array1[] = mt_rand(0, 99);
                         // Ноль тоже считается четным числом
-                        foreach ($array1 as $num) echo ($num % 2 == 0) ? "<b>$num</b><br>" : "$num</br>";
+                        $arr1_last_num = array_slice($array1, -1)[0]; // Последний элемент массива
+                        foreach ($array1 as $num) {
+                            echo ($num % 2 == 0) ? "<b>$num</b>" : $num;
+                            if ($num != $arr1_last_num) echo '<br>';
+                        }
                     ?>
                 </code>
             </details>
@@ -75,7 +79,7 @@ foreach ($array2 as $sub_array) {<br>
 // Инициализируем массив:
 $array3 = [];
 // Заполняем массив подмассивами (в количестве n) в цикле for:
-for ($i = 0, $n = mt_rand(2, 5); $i < $n; $i++) {
+for ($i = 0, $n = mt_rand(2, 5); $i &lt; $n; $i++) {
     // Инициализация нового подмассива в цикле:
     $sub_array = [];
     // Подмассив будет заполнен 2-10 числами:
@@ -87,7 +91,7 @@ for ($i = 0, $n = mt_rand(2, 5); $i < $n; $i++) {
         // Обеспечивает уникальность вносимого значения:
         if (!in_array($random_num, $sub_array)) $sub_array[] = $random_num;
     }
-    while (count($sub_array) < $nums_quantity);
+    while (count($sub_array) &lt; $nums_quantity);
     // Добавляем подмассив в родительский массив:
     $array3[] = $sub_array;
 }

@@ -52,7 +52,7 @@
             </li>
             <li class="no_print">
                 <a href="https://time.is/" title="Точное время" target="_blank">
-                    <img src="images/icons/<?=get_daytime_icon_name()?>.png" alt="Точное время" width="100%">
+                    <img src="images/icons/<?=get_daytime_icon_name()?>.png" alt="Точное время">
                 </a>
             </li>
         </ul>

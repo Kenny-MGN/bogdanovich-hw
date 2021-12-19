@@ -1,6 +1,7 @@
 <? $copyright = '2021 &copy; Богданович Вадим'; ?>
 <footer>
     <section id="social_block">
+        <h2 style="display: none">Напишите мне:</h2>
         <a href="https://vk.com/kenny_mgn" title="VK" target="_blank">
             <img src="images/social/vk.png" alt="ВКонтакте">
         </a>

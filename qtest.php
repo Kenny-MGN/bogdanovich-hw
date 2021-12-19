@@ -1,7 +1,7 @@
 <?
     $page_title = 'Тест';
     require_once ('header.php');
-    require_once ('classes/test.php');
+    require_once('classes/Test.php');
 ?>
 <main>
     <?
