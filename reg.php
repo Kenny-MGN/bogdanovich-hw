@@ -1,4 +1,3 @@
-<
 <?
     session_start();
     $page_title = 'Регистрация';
